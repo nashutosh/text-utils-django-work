@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        .analyzer-section, .info-section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-options {
+            margin: 15px 0;
+        }
+        .btn {
+            background: #35424a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #46a049;
+        }
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to the Text Analyzer</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="analyzer-section">
+                <h2>Analyze Your Text</h2>
+                <form action="/analyze" method="get">
+                    <div class="form-group">
+                        <label for="textInput">Enter your text:</label><br>
+                        <textarea id="textInput" name="text" rows="10" placeholder="Type your text here..."></textarea><br><br>
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" name="removepunc"> Remove Punctuations
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="captalize"> Capitalize Text
+                        </label><br><br>
+                    </div>
+                    <button type="submit" class="btn">Analyze Text</button>
+                </form>
+            </section>
+
+            <section class="info-section">
+                <h3>How it Works</h3>
+                <p>This tool helps you analyze your text by providing options to remove punctuations and capitalize the text. Simply input your text and choose your preferred options.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Text Analyzer | Designed by Ashutosh Singh</p>
+        </div>
+    </footer>
+</body>
+</html>
